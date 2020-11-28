@@ -1,1 +1,1 @@
-# Diagonalizacao_de_Matrizes_Python
+# Método das Potências
