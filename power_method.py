@@ -23,27 +23,31 @@ def metodo_das_potencias(prec):
 	        O usuário deverá colocar matrizes quadradas n dimensionais
 	        diagonalizáveis.
 	'''
+	
 	A = mat.matriz()
 	print(A)
-	X = list(map(int,input('\nDigite os elementos da matriz inicial de mesma dimensão: ').split())) # Chute inicial
-	X_novo = np.array(X) #transforma a lista X em um array
-	Y = A.dot(X_novo.T) # multiplica a matriz A pela transposta de X
+	X = mat.Interacao()
+	Y = A.dot(X.T) # multiplica a matriz A pela transposta de X
 	lambd = max(Y) # separa o valor de maior módulo
-	X_novo = (1/lambd)*Y # calcula o autovetor
+	X = (1/lambd)*Y # calcula o autovetor
 	lambd_anterior = lambd + 1 #pra rodar
 	erro = abs(lambd - lambd_anterior)
 	print(Y)
 	print(X)
 	
 	while erro > prec: #laço de interações
-		Y = A.dot(X_novo.T)
+		Y = A.dot(X)
 		lambd_anterior = lambd
 		lambd = max(Y)
-		X_novo = (1 / lambd) * Y
+		X = (1 / lambd) * Y
 		erro = abs(lambd - lambd_anterior)
 		print(Y)
-		print(f'autovetor:{X_novo}')
+		print(f'autovetor:{X}')
 		print(f'autovalor: {lambd}')
 		print('--------------')
+		
+	return X,lambd
+    
 
-metodo_das_potencias(prec = 1e-10)
+
+X, lambd = metodo_das_potencias(prec = 1e-3)

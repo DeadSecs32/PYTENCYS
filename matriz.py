@@ -13,3 +13,9 @@ def matriz(arq = 'input_user.xlsx',sheet = 'Matriz' ):
 	df = pd.read_excel(arq, sheet_name = sheet)
 	Array = df.to_numpy()
 	return Array
+
+def Interacao(arq = 'input_user.xlsx',sheet = 'Interacao' ):
+    df = pd.read_excel(arq, sheet_name = sheet)
+    Array = df.to_numpy()
+    return Array
+
