@@ -1,2 +1,2 @@
-# Método das Potências
+# PYTENCYS
 ![](pythonline.gif)
