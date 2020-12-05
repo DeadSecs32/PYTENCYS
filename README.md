@@ -1,2 +1,2 @@
 # PYTENCYS
-![](pythonline.gif)
+![](PYTENCYS/pythonline.gif)
