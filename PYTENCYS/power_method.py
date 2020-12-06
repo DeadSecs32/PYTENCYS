@@ -46,9 +46,9 @@ def metodo_das_potencias(prec):
 		print(f'autovalor: {lambd}')
 		print('--------------')
 
-	Lambd_final = lambd
-	print(f'O autovalor final é: {Lambd_final}')
+	Lambd_final = lambd 
+	print(f'O autovalor final é: {Lambd_final}') #retorna o lambda final 
 	X_final = X
-	print(f'O autovetor final é:\n {X_final}')
+	print(f'O autovetor final é:\n {X_final}') #retorna o autovetor final 
 
 	return X_final,Lambd_final
